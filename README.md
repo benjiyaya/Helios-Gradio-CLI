@@ -1,6 +1,6 @@
 ## Helios-Distilled Gradio WebUI
 
-This folder contains a small Gradio WebUI for running the **Helios-Distilled** video model (`BestWishYsh/Helios-Distilled`) locally with Diffusers, supporting **Text → Video**, **Image → Video**, and **Video → Video**.
+This folder contains a small Gradio WebUI for running the **Helios-Distilled** video model (`BestWishYsh/Helios-Distilled`) locally with Diffusers, supporting **Text → Video**, and **Image → Video**.
 
 The implementation follows the official usage examples from the model card on Hugging Face (`https://huggingface.co/BestWishYsh/Helios-Distilled`).
 
