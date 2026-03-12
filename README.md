@@ -81,7 +81,6 @@ Then open the printed local URL (by default `http://127.0.0.1:7860`) in your bro
 
 - **Text → Video**: type a prompt, adjust **width**, **height**, frames/FPS/pyramid steps/guidance/seed, and generate a new video.
 - **Image → Video**: upload a still image (resized to your chosen width×height) and generate motion guided by an optional prompt.
-- **Video → Video**: upload an input video (e.g. MP4), optionally add a guiding prompt; output uses your chosen width×height.
 
 **Video resolution (width × height):**
 - **Gradio:** Each tab has **Width** and **Height** number inputs. Default **640×384**. Allowed range: width 256–1280, height 256–720. Values are rounded down to a multiple of **16** (required by the model). Larger resolution uses more VRAM and time.
@@ -122,9 +121,9 @@ python run_i2v_cli.py frame.png "Clouds moving" --num-frames 264 --width 640 --h
 ```
 
 **Video-to-Video**
-```powershell
-python run_v2v_cli.py path/to/input.mp4 "A time-lapse from a train window"
-python run_v2v_cli.py clip.mp4 "Dynamic scenery" --num-frames 264 --height 416
+```
+testing currently , await for the next update.
+
 ```
 
 Options (all three CLIs): `--negative`, `--num-frames`, `--fps`, `--width`, `--height`, `--pyramid-steps S1 S2 S3`, `--guidance-scale`, `--seed`, `--cpu-offload` / `--no-cpu-offload`, `--no-amplify-first-chunk`. Default resolution **640×384**; width and height are rounded to a multiple of 16. Outputs: `outputs/t2v_*.mp4`, `outputs/i2v_*.mp4`, `outputs/v2v_*.mp4`. For **4-bit quantization** with the CLI, set `HELIOS_4BIT=1` (PowerShell: `$env:HELIOS_4BIT = "1"`) before running; requires `bitsandbytes`.
